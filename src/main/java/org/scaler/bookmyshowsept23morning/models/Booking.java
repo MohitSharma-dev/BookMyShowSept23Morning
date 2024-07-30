@@ -15,6 +15,8 @@ import java.util.List;
 @Entity
 public class Booking extends BaseModel {
 
+    // booking 1-N seat
+    @OneToMany
     private List<ShowSeat> showSeats;
     private int amount;
     // Booking 1 : M Payments
