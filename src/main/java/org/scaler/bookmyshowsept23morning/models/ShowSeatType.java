@@ -1,6 +1,7 @@
 package org.scaler.bookmyshowsept23morning.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,10 +10,10 @@ import lombok.Setter;
 @Setter
 @Entity
 public class ShowSeatType extends BaseModel {
-    @OneToOne
+    @ManyToOne
     private Show show;
 
-    @OneToOne
+    @ManyToOne
     private SeatType seatType;
     private int price;
 }

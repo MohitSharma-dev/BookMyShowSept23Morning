@@ -1,8 +1,6 @@
 package org.scaler.bookmyshowsept23morning.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,12 +8,12 @@ import lombok.Setter;
 @Setter
 @Entity
 public class ShowSeat extends BaseModel {
-    @OneToOne
+    @ManyToOne
     private Show show;
 
-    @OneToOne
+    @ManyToOne
     private Seat seat;
 
-    @Enumerated
+    @Enumerated(value = EnumType.ORDINAL)
     private ShowSeatStatus showSeatStatus;
 }
