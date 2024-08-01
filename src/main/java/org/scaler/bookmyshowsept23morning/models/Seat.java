@@ -9,10 +9,12 @@ import lombok.Setter;
 @Entity
 public class Seat extends BaseModel {
     private String seatNumber;
-    private int row;
-    private int col;
+    private int seatRow;
+    private int seatCol;
     @OneToOne
     private SeatType seatType;
-    @OneToOne
+
+    @ManyToOne
+    @JoinColumn(name = "screen_id", referencedColumnName = "id")
     private Screen screen;
 }

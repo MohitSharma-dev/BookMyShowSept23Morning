@@ -20,4 +20,7 @@ public class Screen extends BaseModel {
     @Enumerated(EnumType.ORDINAL)
     @ElementCollection
     private List<Feature> features;
+
+    @OneToMany(mappedBy = "screen")
+    private List<Seat> seats;
 }
