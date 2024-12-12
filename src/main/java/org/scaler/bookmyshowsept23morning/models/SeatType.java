@@ -1,4 +1,12 @@
 package org.scaler.bookmyshowsept23morning.models;
 
-public class SeatType {
+import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class SeatType extends BaseModel {
+
 }
